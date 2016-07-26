@@ -1,3 +1,22 @@
+" enable Pathogen
+execute pathogen#infect()
+
+" ----------- Plugins -------------
+set nocompatible
+filetype off
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+
+call vundle#begin()
+
+Plugin 'scrooloose/nerdtree' " nerdtree
+
+call vundle#end()
+" ------------ Plugins end -----------
+
+filetype plugin indent on
+
 " color syntax
 syntax on
 
@@ -11,8 +30,6 @@ set number
 " store temp files
 set dir=/tmp
 
-" enable Pathogen
-execute pathogen#infect()
-
-" set nerdtree to ctrl-n
-map <C-n> :NERDTreeToggle<CR>
+" nerdtree settings
+map <C-n> :NERDTreeToggle<CR> " ctrl-n opens root dir
+map <C-m> :NERDTreeFind<CR>   " ctrl-m maps to current file

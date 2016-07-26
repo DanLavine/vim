@@ -10,7 +10,9 @@ set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
 
-Plugin 'scrooloose/nerdtree' " nerdtree
+Plugin 'scrooloose/nerdtree'    " nerdtree
+Plugin 'ctrlpvim/ctrlp.vim.git' " ctrlp
+Plugin 'airblade/vim-gitgutter' " visualize git diff
 
 call vundle#end()
 " ------------ Plugins end -----------

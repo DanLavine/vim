@@ -34,3 +34,9 @@ set dir=/tmp
 " nerdtree settings
 map <C-n> :NERDTreeToggle<CR> " ctrl-n opens root dir
 map <C-m> :NERDTreeFind<CR>   " ctrl-m maps to current file
+
+" map quit for typos
+:command WQ wq
+:command Wq wq
+:command W w
+:command Q q

@@ -18,6 +18,7 @@ Plugin 'Valloric/YouCompleteMe' " YouCompleteMe
 call vundle#end()
 
 " color syntax
+set hlsearch
 syntax on
 filetype plugin indent on
 
@@ -25,8 +26,11 @@ filetype plugin indent on
 set smartindent
 set tabstop=2
 set shiftwidth=2
+set softtabstop=2
 set expandtab
 set number
+set nowrap
+
 
 " store temp files
 set dir=/tmp
@@ -35,8 +39,17 @@ set dir=/tmp
 map <C-n> :NERDTreeToggle<CR> " ctrl-n opens root dir
 map <C-m> :NERDTreeFind<CR>   " ctrl-m maps to current file
 
+" ycm defaults for auto complete
+let g:ycm_min_num_of_chars_for_completion = 99
+
+" ycm C/C++ settings
+let g:ycm_global_ycm_extra_conf = '~/.vim/plugin_defaults/ycm_extra_conf.py'
+
 " map quit for typos
 :command WQ wq
 :command Wq wq
 :command W w
 :command Q q
+
+" remove all trailing whitespace on save
+autocmd BufWritePre * :%s/\s\+$//e

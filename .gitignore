@@ -4,4 +4,7 @@
 nerdtree/
 ctrlp.vim/
 vim-gitgutter/
-YouCompleteMe
+YouCompleteMe/
+
+# ignor pyc files
+*.pyc

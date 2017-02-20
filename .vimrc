@@ -14,20 +14,23 @@ Plugin 'scrooloose/nerdtree'    " nerdtree
 Plugin 'ctrlpvim/ctrlp.vim.git' " ctrlp
 Plugin 'airblade/vim-gitgutter' " visualize git diff
 Plugin 'Valloric/YouCompleteMe' " YouCompleteMe
+Plugin 'rking/ag.vim'
 
 call vundle#end()
 
 " color syntax
 set hlsearch
 syntax on
-filetype plugin indent on
+filetype plugin indent off
 
-" set tab with to 2 spaces and line number
+" set tab with to 2 spaces
+set autoindent
 set smartindent
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
+
 set number
 set nowrap
 

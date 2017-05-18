@@ -6,6 +6,8 @@ ctrlp.vim/
 vim-gitgutter/
 YouCompleteMe/
 ag.vim/
+vim-colors-solarized/
+vim-cpp-enhanced-highlight/
 
 # ignor pyc files
 *.pyc

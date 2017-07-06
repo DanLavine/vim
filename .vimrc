@@ -47,6 +47,7 @@ set laststatus=2
 " nerdtree settings
 map <C-n> :NERDTreeToggle<CR> " ctrl-n opens root dir
 map <C-m> :NERDTreeFind<CR>   " ctrl-m maps to current file
+let NERDTreeShowHidden=1
 
 " ycm defaults for auto complete
 let g:ycm_min_num_of_chars_for_completion = 99

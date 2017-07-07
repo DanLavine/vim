@@ -58,10 +58,6 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/plugin_defaults/ycm_extra_conf.py'
 " remove all trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
 
-" color syntax
-"syntax on
-"filetype plugin indent on
-
 " C++ colors
 let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1

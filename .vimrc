@@ -15,11 +15,12 @@ Plugin 'Valloric/YouCompleteMe' " YouCompleteMe
 Plugin 'rking/ag.vim'           " ag
 Plugin 'altercation/vim-colors-solarized' " solarized
 Plugin 'octol/vim-cpp-enhanced-highlight' " vim cpp enhancments
+Plugin 'fatih/vim-go'           " golang
 
 call vundle#end()
 
 syntax on
-filetype plugin indent off
+filetype plugin indent on
 
 " set tab with to 2 spaces
 set autoindent
@@ -28,6 +29,10 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
+
+" set folding
+set foldmethod=syntax
+set foldlevelstart=20 " make sure all folds are open when opening a file
 
 " set numbers
 set number
@@ -46,14 +51,16 @@ set laststatus=2
 
 " nerdtree settings
 map <C-n> :NERDTreeToggle<CR> " ctrl-n opens root dir
-map <C-m> :NERDTreeFind<CR>   " ctrl-m maps to current file
+map <C-\> :NERDTreeFind<CR>   " ctrl-\ maps to current file
 let NERDTreeShowHidden=1
 
 " ycm defaults for auto complete
 let g:ycm_min_num_of_chars_for_completion = 99
+inoremap <C-Space> <C-X><C-O>
 
 " ycm C/C++ settings
 let g:ycm_global_ycm_extra_conf = '~/.vim/plugin_defaults/ycm_extra_conf.py'
+let g:ycm_cache_omnifunc = 0
 
 " remove all trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
@@ -75,3 +82,7 @@ colorscheme solarized
 :command Wq wq
 :command W w
 :command Q q
+
+" Go settings
+let g:go_fmt_command = "goimports"
+let g:go_fmt_experimental = 1

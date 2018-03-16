@@ -8,6 +8,10 @@ YouCompleteMe/
 ag.vim/
 vim-colors-solarized/
 vim-cpp-enhanced-highlight/
+vim-go/
+
+# vim-go stuff
+/view
 
 # ignor pyc files
 *.pyc

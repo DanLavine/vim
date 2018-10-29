@@ -5,19 +5,26 @@ filetype off
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 
-call vundle#begin()
+call plug#begin('~/.vim/bundle')
 
-Plugin 'VundleVim/Vundle.vim'   " let vundle manage itself
-Plugin 'scrooloose/nerdtree'    " nerdtree
-Plugin 'ctrlpvim/ctrlp.vim.git' " ctrlp
-Plugin 'airblade/vim-gitgutter' " visualize git diff
-Plugin 'Valloric/YouCompleteMe' " YouCompleteMe
-Plugin 'rking/ag.vim'           " ag
-Plugin 'altercation/vim-colors-solarized' " solarized
-Plugin 'octol/vim-cpp-enhanced-highlight' " vim cpp enhancments
-Plugin 'fatih/vim-go'           " golang
+" nerdtree
+Plug 'scrooloose/nerdtree', { 'tag': '91e0f2253fbecefa7e14f095950341584877ef19' }
+" ctrlp
+Plug 'ctrlpvim/ctrlp.vim.git', { 'tag': 'ebc568c3992d9002d1d35b85737dfa0d9ce70d9f'}
+" visualize git diff
+Plug 'airblade/vim-gitgutter', { 'tag': '0597380f6b22f43a3ea6ff8364d5c239bb2504ea'}
+" YouCompleteMe
+Plug 'Valloric/YouCompleteMe', { 'tag': 'f67e5ff27b048d8c55a10ba6a27c6c5b16d0f6ba' }
+" ag
+Plug 'rking/ag.vim', { 'tag': '4a0dd6e190f446e5a016b44fdaa2feafc582918e' }
+" solarized
+Plug 'altercation/vim-colors-solarized', { 'tag': '528a59f26d12278698bb946f8fb82a63711eec21' }
+" vim cpp enhancments
+Plug 'octol/vim-cpp-enhanced-highlight', { 'tag': '3aa95627380501d9ce77eb8ff5dcf889d0d0ac41' }
+" golang
+Plug 'fatih/vim-go', { 'tag': 'd5ce080c25806d68189be641e19996898138f1a4' }
 
-call vundle#end()
+call plug#end()
 
 syntax on
 filetype plugin indent on

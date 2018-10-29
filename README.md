@@ -9,9 +9,14 @@ To download this repo, you will want to place it under your `$HOME/.vim` folder:
 git clone https://github.com/DanLavine/vim $HOME/.vim --recursive
 ```
 
+# Plugin manager
+
+The plugin manager for vim is [vim-plug](https://github.com/junegunn/vim-plug).
+I have not tried updating vim-plug yet so it is not currently managing itself.
+
 # Installing plugins
 
-To install the plugins, run `vim .`. Then once Vim starts, you can run: `:PluginInstall`.
+To install the plugins, run `vim .`. Then once Vim starts, you can run: `:PlugInstall`.
 
 # Setting up plugins
 

@@ -55,12 +55,19 @@ map <C-\> :NERDTreeFind<CR>   " ctrl-\ maps to current file
 let NERDTreeShowHidden=1
 
 " ycm defaults for auto complete
-let g:ycm_min_num_of_chars_for_completion = 99
-inoremap <C-Space> <C-X><C-O>
+"" turn on tag completion
+let g:ycm_collect_identifiers_from_tags_files=1
+"" complete syntax keywords
+let g:ycm_seed_identifiers_with_syntax=1
+"" don't cache completion items
+let g:ycm_cache_omnifunc = 0
+"" don't try to autocomplete when typing initial variables
+let g:ycm_min_num_of_chars_for_completion = 1
+"" load ycm conf by default
+let g:ycm_confirm_extra_conf=0
 
 " ycm C/C++ settings
 let g:ycm_global_ycm_extra_conf = '~/.vim/plugin_defaults/ycm_extra_conf.py'
-let g:ycm_cache_omnifunc = 0
 
 " remove all trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
@@ -72,9 +79,7 @@ let g:cpp_experimental_template_highlight = 1
 let g:cpp_experimental_simple_template_highlight = 1
 let g:cpp_concepts_highlight = 1
 
-
 " solarized colors
-syntax enable
 colorscheme solarized
 
 " map quit for typos

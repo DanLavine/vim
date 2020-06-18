@@ -2,27 +2,22 @@
 set nocompatible
 filetype off
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-
 call plug#begin('~/.vim/bundle')
 
 " nerdtree
-Plug 'scrooloose/nerdtree', { 'tag': '91e0f2253fbecefa7e14f095950341584877ef19' }
+Plug 'scrooloose/nerdtree', { 'tag': '6.9.0' }
 " ctrlp
-Plug 'ctrlpvim/ctrlp.vim.git', { 'tag': 'ebc568c3992d9002d1d35b85737dfa0d9ce70d9f'}
+Plug 'ctrlpvim/ctrlp.vim', { 'tag': '1.80'}
 " visualize git diff
 Plug 'airblade/vim-gitgutter', { 'tag': '0597380f6b22f43a3ea6ff8364d5c239bb2504ea'}
 " YouCompleteMe
-Plug 'Valloric/YouCompleteMe', { 'tag': 'f67e5ff27b048d8c55a10ba6a27c6c5b16d0f6ba' }
-" ag
-Plug 'rking/ag.vim', { 'tag': '4a0dd6e190f446e5a016b44fdaa2feafc582918e' }
+Plug 'ycm-core/YouCompleteMe', { 'tag': 'f9906f804b02e6b7e70a7f1a6f949e905784b5b9' }
 " solarized
 Plug 'altercation/vim-colors-solarized', { 'tag': '528a59f26d12278698bb946f8fb82a63711eec21' }
 " vim cpp enhancments
-Plug 'octol/vim-cpp-enhanced-highlight', { 'tag': '3aa95627380501d9ce77eb8ff5dcf889d0d0ac41' }
+Plug 'octol/vim-cpp-enhanced-highlight', { 'tag': '27e0ffc215b81fa5aa87eca396acd4421d36c060' }
 " golang
-Plug 'fatih/vim-go', { 'tag': 'd5ce080c25806d68189be641e19996898138f1a4' }
+Plug 'fatih/vim-go', { 'tag': 'v1.23' }
 
 call plug#end()
 
@@ -31,6 +26,7 @@ filetype plugin indent on
 
 " set tab with to 2 spaces
 set autoindent
+set cindent
 set smartindent
 set tabstop=2
 set shiftwidth=2
@@ -70,6 +66,8 @@ let g:ycm_seed_identifiers_with_syntax=1
 let g:ycm_cache_omnifunc = 0
 "" don't try to autocomplete when typing initial variables
 let g:ycm_min_num_of_chars_for_completion = 1
+"" turn of auto command id fuzzy completion
+let g:ycm_min_num_identifier_candidate_chars = 100
 "" load ycm conf by default
 let g:ycm_confirm_extra_conf=0
 

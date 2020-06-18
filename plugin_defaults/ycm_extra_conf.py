@@ -50,7 +50,7 @@ flags = [
 '-fexceptions',
 '-DNDEBUG',
 # set c++17 as the default
-'-c++17',
+'-std=c++17'
 # You 100% do NOT need -DUSE_CLANG_COMPLETER and/or -DYCM_EXPORT in your flags;
 # only the YCM source code needs it.
 '-DUSE_CLANG_COMPLETER',
@@ -75,16 +75,6 @@ get_python_inc(),
 'cpp/ycm',
 '-I',
 'cpp/ycm/ClangCompleter',
-'-isystem',
-'cpp/ycm/tests/gmock/gtest',
-'-isystem',
-'cpp/ycm/tests/gmock/gtest/include',
-'-isystem',
-'cpp/ycm/tests/gmock',
-'-isystem',
-'cpp/ycm/tests/gmock/include',
-'-isystem',
-'cpp/ycm/benchmarks/benchmark/include',
 ]
 
 # Clang automatically sets the '-std=' flag to 'c++14' for MSVC 2015 or later,

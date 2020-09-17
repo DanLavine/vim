@@ -50,7 +50,7 @@ flags = [
 '-fexceptions',
 '-DNDEBUG',
 # set c++17 as the default
-'-std=c++17'
+'-std=c++17',
 # You 100% do NOT need -DUSE_CLANG_COMPLETER and/or -DYCM_EXPORT in your flags;
 # only the YCM source code needs it.
 '-DUSE_CLANG_COMPLETER',
@@ -76,13 +76,6 @@ get_python_inc(),
 '-I',
 'cpp/ycm/ClangCompleter',
 ]
-
-# Clang automatically sets the '-std=' flag to 'c++14' for MSVC 2015 or later,
-# which is required for compiling the standard library, and to 'c++11' for older
-# versions.
-if platform.system() != 'Windows':
-  flags.append( '-std=c++11' )
-
 
 # Set this to the absolute path to the folder (NOT the file!) containing the
 # compile_commands.json file to use that instead of 'flags'. See here for

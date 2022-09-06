@@ -11,7 +11,7 @@ Plug 'ctrlpvim/ctrlp.vim', { 'tag': '1.81'}
 " visualize git diff
 Plug 'airblade/vim-gitgutter', { 'tag': '0597380f6b22f43a3ea6ff8364d5c239bb2504ea'}
 " YouCompleteMe
-" Plug 'ycm-core/YouCompleteMe', { 'tag': 'f35a30d4e22783050944c89b666e481d016cd4e1' }
+Plug 'ycm-core/YouCompleteMe', { 'tag': 'd4343e8384ffb25d70a9ebc966bbf1277735567c' }
 " solarized
 Plug 'altercation/vim-colors-solarized', { 'tag': '528a59f26d12278698bb946f8fb82a63711eec21' }
 " vim cpp enhancments
@@ -63,19 +63,17 @@ let g:go_info_mode='gopls'
 "au filetype go inoremap <C-space> <C-x><C-o>
 au filetype go inoremap <C-@> <C-x><C-o>
 
-"" ycm defaults for auto complete
-""" turn on tag completion
-"let g:ycm_collect_identifiers_from_tags_files=1
-""" complete syntax keywords
-"let g:ycm_seed_identifiers_with_syntax=1
-""" don't cache completion items
-"let g:ycm_cache_omnifunc = 0
-""" don't try to autocomplete when typing initial variables
-"let g:ycm_min_num_of_chars_for_completion = 1
-""" turn of auto command id fuzzy completion
-"let g:ycm_min_num_identifier_candidate_chars = 100
-""" load ycm conf by default
-"let g:ycm_confirm_extra_conf=0
+" ycm defaults for auto complete
+"" turn on tag completion
+let g:ycm_collect_identifiers_from_tags_files=1
+"" complete syntax keywords
+let g:ycm_seed_identifiers_with_syntax=1
+"" don't cache completion items
+let g:ycm_cache_omnifunc = 0
+"" don't try to autocomplete when typing initial variables
+let g:ycm_min_num_of_chars_for_completion = 1
+"" turn of auto command id fuzzy completion
+let g:ycm_min_num_identifier_candidate_chars = 100
 
 " ycm C/C++ settings
 " let g:ycm_global_ycm_extra_conf = '~/.vim/plugin_defaults/ycm_extra_conf.py'

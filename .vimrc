@@ -17,7 +17,7 @@ Plug 'altercation/vim-colors-solarized', { 'tag': '528a59f26d12278698bb946f8fb82
 " vim cpp enhancments
 Plug 'octol/vim-cpp-enhanced-highlight', { 'tag': '27e0ffc215b81fa5aa87eca396acd4421d36c060' }
 " golang
-Plug 'fatih/vim-go', { 'tag': 'v1.26' }
+Plug 'fatih/vim-go', { 'tag': '22b2273cfe562ac1c1af976ce77f18a3b1776f3c' }
 
 call plug#end()
 
